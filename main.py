@@ -80,7 +80,7 @@ def add_first(allw):
     first=[line.replace("\n","").split() for line in f]
     f.close()
 
-path = "1.jpg"
+path = "2.jpg"
 print(path)
 if not path.endswith(".pdf") and not path.endswith(".jpg"):
     print("Must use a pdf or a jpg image to run the program.")
