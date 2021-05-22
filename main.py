@@ -80,7 +80,7 @@ def add_first(allw):
     first=[line.replace("\n","").split() for line in f]
     f.close()
 
-path = "2.jpg"
+path = "5.jpg"
 print(path)
 if not path.endswith(".pdf") and not path.endswith(".jpg"):
     print("Must use a pdf or a jpg image to run the program.")
@@ -271,8 +271,6 @@ for table in tables:
         print(first[i])
         #print(name[i])
     
-    
-    """FILENAME="8-A_Algebra.csv"
     with open(FILENAME, 'w', newline="") as file:
-        csv.writer(file, delimiter=" ").writerows(first)"""
+        csv.writer(file, delimiter=" ").writerows(first)
 workbook.close()
