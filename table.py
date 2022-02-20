@@ -33,7 +33,7 @@ class Table:
             row.append(joints[i])
             row_pre.append(joints[i][0])
             cnt+=1
-            print(joints[i][1])
+            # print(joints[i][1])
             # If the next joint has a new y-coordinate,
             # start a new row.
             #if abs(joints[i + 1][1] - row_y)>20 and (len(self.joints)>0 and cnt==len(self.joints[0]) or prov==False):
@@ -49,7 +49,7 @@ class Table:
                 #print(prov_x)
                 """
                 row = sorted(row,key=lambda r: r[0])
-                print(row)
+                # print(row)
                 self.joints.append(row)
                 row_y = joints[i + 1][1]
                 row = []
