@@ -70,7 +70,7 @@ def add_first(allw):
     first=[line.replace("\n","").split() for line in f]
     f.close()
 
-path = "1.jpg"
+path = "6.jpg"
 print(path)
 if not path.endswith(".pdf") and not path.endswith(".jpg"):
     print("Must use a pdf or a jpg image to run the program.")
@@ -88,7 +88,7 @@ else:
 cv2.imwrite("data/target.png",ext_img)
 #ext_img.save("data/target.png", "PNG")
 # image = cv.imread("data/target.png")
-image = cv.imread("1.jpg")
+image = cv.imread("6.jpg")
 img = cv.imread("data/target.png")
 # Convert resized RGB image to grayscale
 NUM_CHANNELS = 3
@@ -128,7 +128,7 @@ To isolate the vertical and horizontal lines,
 2. Create a structuring element.
 3. Isolate the lines by eroding and then dilating the image.
 """
-SCALE = 35
+SCALE = 50
 
 # Isolate horizontal and vertical lines using morphological operations
 horizontal = filtered.copy()
@@ -188,7 +188,7 @@ for i in range(len(contours)):
     # Sorts based on parameters (aka keys) starting from the last parameter, then second-to-last, etc
     sorted_indices = np.lexsort((joint_coords[:, 0], joint_coords[:, 1]))
     joint_coords = joint_coords[sorted_indices]
-    #print(joint_coords)
+    # print(joint_coords)
     # Store joint coordinates in the table instance
     table.set_joints(joint_coords)
     tables.append(table)
@@ -233,7 +233,7 @@ for table in tables:
     for i in range(len(table_entries)):
     #for i in range(5):
         row = table_entries[i]
-        # print(row)
+        print(row)
         for j in range(len(row)):
             entry = row[j]
             # print(entry)

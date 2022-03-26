@@ -37,17 +37,7 @@ class Table:
             # If the next joint has a new y-coordinate,
             # start a new row.
             #if abs(joints[i + 1][1] - row_y)>20 and (len(self.joints)>0 and cnt==len(self.joints[0]) or prov==False):
-            if abs(joints[i + 1][1] - row_y)>45:
-                """prov_x=False
-                #print(row_pre)
-                for n in row_pre:
-                    if abs(n-row_x)<3:
-                        prov_x=True
-                        row_x=n
-                        #print(row_x)
-                        break
-                #print(prov_x)
-                """
+            if abs(joints[i + 1][1] - row_y)>20:
                 row = sorted(row,key=lambda r: r[0])
                 # print(row)
                 self.joints.append(row)
@@ -56,7 +46,7 @@ class Table:
                 cnt=0
                 prov=True
                 row_pre=[]
-        #print(self.joints)
+        # print(self.joints)
     # Prints the coordinates of the joints.
     def print_joints(self):
         if self.joints == None:

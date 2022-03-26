@@ -135,7 +135,7 @@ def run_tesseract(filename, img_id, psm, oem):
     #print(parse_text)
 
     # Run tesseract
-    text = pytesseract.image_to_string(image, lang=language, config=configuration)
+    # text = pytesseract.image_to_string(image, lang=language, config=configuration)
     #if len(text.strip()) == 0:
     #    configuration += " -c tessedit_char_whitelist=0123456789"
      #   text = pytesseract.image_to_string(image, lang=language, config=configuration)
